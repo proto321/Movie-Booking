@@ -109,7 +109,7 @@ const Navbar = () => {
                 <div className={navbarStyles.logoIconContainer}>
                     <Clapperboard className={navbarStyles.logoIcon}/>
                 </div>
-                <div className={navbarStyles.logoText}>CineVerse</div>
+                <div className={navbarStyles.logoText}>MovieMania 🎬</div>
             </div>
 
             <div className={navbarStyles.desktopNav}>
@@ -251,7 +251,9 @@ const Navbar = () => {
               </div>
             )}
         </div>
-            <style jsx>{navbarCSS}</style>
+            {/* <style jsx>{navbarCSS}</style> */}
+            <style >{navbarCSS}</style>
+
     </nav>
   )
 }
