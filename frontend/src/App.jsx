@@ -7,6 +7,8 @@ import Movie from './pages/Movie'
 import Release from './pages/Release'
 import Booking from './pages/Booking'
 import Contact from './pages/Contact'
+import MovieDetailPage from './pages/MovieDetailPage'
+import MovieDetailPageHome from './pages/MovieDetailPageHome'
 
 const App = () => {
   return (
@@ -19,6 +21,9 @@ const App = () => {
         <Route path='/releases' element={<Release />} />
         <Route path='/bookings' element={<Booking />} />
         <Route path='/contact' element={<Contact />} />
+
+        <Route path='/movies/:id' element={<MovieDetailPage />} />
+        <Route path='/movie/:id' element={<MovieDetailPageHome />} />
       </Routes>
     </>
   )
