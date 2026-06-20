@@ -1,6 +1,7 @@
 import React from 'react'
 import { moviesStyles } from '../assets/dummyStyles'
 import movies from '../assets/dummymoviedata'
+
 // import { Link } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Tickets } from 'lucide-react';

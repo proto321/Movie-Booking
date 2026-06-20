@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { movieDetailStyles, movieDetailCSS } from '../assets/dummyStyles';
-import movies from '../assets/dummymoviedata';
+import movies from '../assets/dummymdata';
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { ArrowLeft, Calendar, Play, Star, User, X } from 'lucide-react';
@@ -356,7 +356,7 @@ const MovieDetailPage = () => {
                         <div className={movieDetailStyles.posterCard}>
                             <div className={movieDetailStyles.posterImage} style={{ maxWidth: '320px' }}>
                                 <img
-                                    src={movie.img}
+                                    src={movie.image}
                                     alt={movie.title}
                                     onError={(e) => {
                                         e.currentTarget.onerror = null;
