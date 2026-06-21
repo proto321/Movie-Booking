@@ -1,11 +1,9 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
 import SeatSelectorPage from '../components/SeatSelectorPage'
 
 const SeatSelector = () => {
   return (
     <div>
-        <Navbar />
         <SeatSelectorPage />    
     </div>
   )

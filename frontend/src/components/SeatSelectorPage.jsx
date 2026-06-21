@@ -3,6 +3,7 @@ import { seatSelectorStyles } from '../assets/dummyStyles'
 import movies from '../assets/dummymdata'
 import { ArrowLeft, CreditCard, RockingChair, Sofa, Ticket } from 'lucide-react'
 import { useNavigate, useParams } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const ROWS = [
     { id: "A", type: "standard", count: 8 },
@@ -141,6 +142,7 @@ const SeatSelectorPage = () => {
     }, 0)
 
     const selectedCount = selected.size
+    
     const audiForSlot = useMemo(() => {
         if (!movie || !slotKey) return null;
         try {
@@ -172,245 +174,249 @@ const SeatSelectorPage = () => {
             <style>{seatSelectorStyles.customCSS}</style>
 
             <div className={seatSelectorStyles.mainContainer}>
-                <button onClick={() => Navigate(-1)} className={seatSelectorStyles.backButton}>
-                    <ArrowLeft size={18} />
-                    Back
-                </button>
+                <div className={seatSelectorStyles.headerContainer}>
+                    <button onClick={() => navigate(-1)}
+                        className={seatSelectorStyles.backButton}
+                    >
+                        <ArrowLeft size={18} />
+                        Back
+                    </button>
 
-                <div className={seatSelectorStyles.titleContainer}>
-                    <h1 className={seatSelectorStyles.movieTitle}>{movie?.title}</h1>
-                    {/* Header */}
-                    <div className={seatSelectorStyles.showtimeText}>
-                        {slotKey
-                            ? new Date(slotKey).toLocaleString("en-IN", {
-                                weekday: "short",
-                                year: "numeric",
-                                month: "short",
-                                day: "numeric",
-                                hour: "2-digit",
-                                minute: "2-digit",
-                            })
-                            : "Showtime unavailable"}
-                    </div>
-                </div>
-
-                <div
-                    style={{ marginLeft: "auto", display: "flex", alignItems: "center" }}
-                >
-                    {audiForSlot && (
-                        <div
-                            style={{
-                                background: "linear-gradient(90deg,#ef4444,#dc2626)",
-                                color: "#fff",
-                                padding: "6px 12px",
-                                borderRadius: 12,
-                                fontWeight: 700,
-                                boxShadow: "0 6px 18px rgba(0,0,0,0.12)",
-                                display: "inline-flex",
-                                alignItems: "center",
-                                gap: 8,
-                                fontSize: 14,
-                            }}
-                            title={`Auditorium: ${audiForSlot}`}
-                        >
-                            {audiForSlot}
+                    <div className={seatSelectorStyles.titleContainer}>
+                        <h1 className={seatSelectorStyles.movieTitle}>{movie?.title}</h1>
+                        {/* Header */}
+                        <div className={seatSelectorStyles.showtimeText}>
+                            {slotKey
+                                ? new Date(slotKey).toLocaleString("en-IN", {
+                                    weekday: "short",
+                                    year: "numeric",
+                                    month: "short",
+                                    day: "numeric",
+                                    hour: "2-digit",
+                                    minute: "2-digit",
+                                })
+                                : "Showtime unavailable"}
                         </div>
-                    )}
-                </div>
-            </div>
+                    </div>
 
-            {/* Screen  */}
-            <div className={seatSelectorStyles.screenContainer}>
-                <div className={seatSelectorStyles.screen}
-                    style={{
-                        transform: "perspective(120px) rotateX(6deg)",
-                        maxWidth: 900,
-                        boxShadow: "0 0 40px rgba(220, 38, 38, 0.18)",
-                    }}
-                >
-                    <div className={seatSelectorStyles.screenText}>CURVED SCREEN</div>
-                    <div className={seatSelectorStyles.screenSubtext}>
-                        Please face the screen -- enjoy the show
+                    <div
+                        style={{ marginLeft: "auto", display: "flex", alignItems: "center" }}
+                    >
+                        {audiForSlot && (
+                            <div
+                                style={{
+                                    background: "linear-gradient(90deg,#ef4444,#dc2626)",
+                                    color: "#fff",
+                                    padding: "6px 12px",
+                                    borderRadius: 12,
+                                    fontWeight: 700,
+                                    boxShadow: "0 6px 18px rgba(0, 0, 255, 0.12)",
+                                    display: "inline-flex",
+                                    alignItems: "center",
+                                    gap: 8,
+                                    fontSize: 14,
+                                }}
+                                title={`Auditorium: ${audiForSlot}`}
+                            >
+                                {audiForSlot}
+                            </div>
+                        )}
                     </div>
                 </div>
-            </div>
 
-            {/* Main Content  */}
-            <div className={seatSelectorStyles.mainContent}>
-                <div className={seatSelectorStyles.seatGridContainer}>
-                    {ROWS.map((row) => (
-                        <div key={row.id} className={seatSelectorStyles.rowContainer}>
-                            <div className={seatSelectorStyles.rowHeader}>
-                                <div className={seatSelectorStyles.rowLabel}>{row.id}</div>
+                {/* Screen  */}
+                <div className={seatSelectorStyles.screenContainer}>
+                    <div className={seatSelectorStyles.screen}
+                        style={{
+                            transform: "perspective(120px) rotateX(6deg)",
+                            maxWidth: 900,
+                            boxShadow: "0 0 40px rgba(38, 120, 220, 0.18)",
+                        }}
+                    >
+                        <div className={seatSelectorStyles.screenText}>CURVED SCREEN</div>
+                        <div className={seatSelectorStyles.screenSubtext}>
+                            Please face the screen -- enjoy the show
+                        </div>
+                    </div>
+                </div>
 
-                                <div className='flex-1 flex justify-center'>
-                                    <div className={seatSelectorStyles.seatGrid}>
-                                        {Array.from({ length: row.count }).map((_, i) => {
-                                            const num = i + 1;
-                                            const id = seatId(row.id, num);
-                                            const isBooked = booked.has(id);
-                                            const isSelected = selected.has(id);
-                                            let cls = seatSelectorStyles.seatButton;
-                                            if (isBooked)
-                                                cls += ` ${seatSelectorStyles.seatButtonBooked}`;
-                                            else if (isSelected)
-                                                cls +=
-                                                    row.type === "recliner"
-                                                        ? ` ${seatSelectorStyles.seatButtonSelectedRecliner}`
-                                                        : ` ${seatSelectorStyles.seatButtonSelectedStandard}`;
-                                            else
-                                                cls +=
-                                                    row.type === "recliner"
-                                                        ? ` ${seatSelectorStyles.seatButtonAvailableRecliner}`
-                                                        : ` ${seatSelectorStyles.seatButtonAvailableStandard}`;
-                                            return (
-                                                <button
-                                                    key={id}
-                                                    onClick={() => toggleSeat(id)}
-                                                    disabled={isBooked}
-                                                    className={cls}
-                                                    title={
-                                                        isBooked
-                                                            ? `Seat ${id} - Already Booked`
-                                                            : `Seat ${id} (${row.type}) - ₹${row.type === "recliner"
-                                                                ? Math.round(basePrice * 1.5)
-                                                                : basePrice
-                                                            }`
-                                                    }
-                                                >
-                                                    <div className={seatSelectorStyles.seatContent}>
-                                                        {row.type === "recliner" ? (
-                                                            <Sofa
-                                                                size={16}
-                                                                className={seatSelectorStyles.seatIcon}
-                                                            />
-                                                        ) : (
-                                                            <RockingChair
-                                                                size={12}
-                                                                className={seatSelectorStyles.seatIcon}
-                                                            />
-                                                        )}
-                                                        <div className={seatSelectorStyles.seatNumber}>
-                                                            {num}
+                {/* Main Content  */}
+                <div className={seatSelectorStyles.mainContent}>
+                    <div className={seatSelectorStyles.seatGridContainer}>
+                        {ROWS.map((row) => (
+                            <div key={row.id} className={seatSelectorStyles.rowContainer}>
+                                <div className={seatSelectorStyles.rowHeader}>
+                                    <div className={seatSelectorStyles.rowLabel}>{row.id}</div>
+
+                                    <div className='flex-1 flex justify-center'>
+                                        <div className={seatSelectorStyles.seatGrid}>
+                                            {Array.from({ length: row.count }).map((_, i) => {
+                                                const num = i + 1;
+                                                const id = seatId(row.id, num);
+                                                const isBooked = booked.has(id);
+                                                const isSelected = selected.has(id);
+                                                let cls = seatSelectorStyles.seatButton;
+                                                if (isBooked)
+                                                    cls += ` ${seatSelectorStyles.seatButtonBooked}`;
+                                                else if (isSelected)
+                                                    cls +=
+                                                        row.type === "recliner"
+                                                            ? ` ${seatSelectorStyles.seatButtonSelectedRecliner}`
+                                                            : ` ${seatSelectorStyles.seatButtonSelectedStandard}`;
+                                                else
+                                                    cls +=
+                                                        row.type === "recliner"
+                                                            ? ` ${seatSelectorStyles.seatButtonAvailableRecliner}`
+                                                            : ` ${seatSelectorStyles.seatButtonAvailableStandard}`;
+                                                return (
+                                                    <button
+                                                        key={id}
+                                                        onClick={() => toggleSeat(id)}
+                                                        disabled={isBooked}
+                                                        className={cls}
+                                                        title={
+                                                            isBooked
+                                                                ? `Seat ${id} - Already Booked`
+                                                                : `Seat ${id} (${row.type}) - ₹${row.type === "recliner"
+                                                                    ? Math.round(basePrice * 1.5)
+                                                                    : basePrice
+                                                                }`
+                                                        }
+                                                    >
+                                                        <div className={seatSelectorStyles.seatContent}>
+                                                            {row.type === "recliner" ? (
+                                                                <Sofa
+                                                                    size={16}
+                                                                    className={seatSelectorStyles.seatIcon}
+                                                                />
+                                                            ) : (
+                                                                <RockingChair
+                                                                    size={12}
+                                                                    className={seatSelectorStyles.seatIcon}
+                                                                />
+                                                            )}
+                                                            <div className={seatSelectorStyles.seatNumber}>
+                                                                {num}
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </button>
-                                            );
-                                        })}
+                                                    </button>
+                                                );
+                                            })}
+                                        </div>
                                     </div>
+                                    <div className={seatSelectorStyles.rowType}>{row.type}</div>
                                 </div>
-                                <div className={seatSelectorStyles.rowType}>{row.type}</div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Booking Summary  */}
-                <div className={seatSelectorStyles.summaryGrid}>
-                    <div className={seatSelectorStyles.summaryContainer}>
-                        <h3 className={seatSelectorStyles.summaryTitle}>
-                            <Ticket size={19} />
-                            Booking Summary
-                        </h3>
-                        <div className=' space-y-4'>
-                            <div className={seatSelectorStyles.summaryItem}>
-                                <span className={seatSelectorStyles.summaryLabel}>
-                                    Selected Seats:
-                                </span>
-                                <span className={seatSelectorStyles.summaryValue}>
-                                    {selectedCount}
-                                </span>
-                            </div>
-
-                            {selectedCount > 0 && (
-                                <>
-                                    <div className={seatSelectorStyles.selectedSeatsContainer}>
-                                        <div className={seatSelectorStyles.selectedSeatsLabel}>
-                                            Selected Seats:
-                                        </div>
-                                        <div className={seatSelectorStyles.selectedSeatsList}>
-                                            {[...selected].sort().map((seat) => (
-                                                <span
-                                                    key={seat}
-                                                    className={seatSelectorStyles.selectedSeatBadge}
-                                                >
-                                                    {seat}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                    <div className={seatSelectorStyles.totalContainer}>
-                                        <div className={seatSelectorStyles.pricingRow}>
-                                            <span className={seatSelectorStyles.totalLabel}>
-                                                Total Amount:
-                                            </span>
-                                            <span className={seatSelectorStyles.totalValue}>
-                                                ₹{Math.round(total)}
-                                            </span>
-                                        </div>
-                                    </div>
-                                </>
-                            )}
-
-                            {selectedCount === 0 && (
-                                <div className={seatSelectorStyles.emptyState}>
-                                    <div className={seatSelectorStyles.emptyStateTitle}>
-                                        No seat selected
-                                    </div>
-                                    <div className={seatSelectorStyles.emptyStateSubtitle}>
-                                        Select seats from the grid to continue
-                                    </div>
-                                </div>
-                            )}
-
-                            <div className={seatSelectorStyles.actionButtons}>
-                                <button
-                                    onClick={clearSelection}
-                                    disabled={selectedCount === 0}
-                                    className={seatSelectorStyles.clearButton}
-                                >
-                                    Clear
-                                </button>
-                                <button
-                                    onClick={confirmBooking}
-                                    disabled={selectedCount}
-                                    className={seatSelectorStyles.confirmButton}
-                                >
-                                    Confirm Booking
-                                </button>
-                            </div>
-                        </div>
+                        ))}
                     </div>
 
-                    <div className={seatSelectorStyles.pricingContainer}>
-                        <h3 className={seatSelectorStyles.pricingTitle}>
-                            <CreditCard size={18} /> Pricing Info 
-                        </h3>
-                        <div className=' space-y-3'>
-                            <div className={seatSelectorStyles.pricingItem}>
-                                <div className={seatSelectorStyles.pricingRow}>
-                                    <div className={seatSelectorStyles.pricingLabel}>
-                                        Standard 
+                    {/* Booking Summary  */}
+                    <div className={seatSelectorStyles.summaryGrid}>
+                        <div className={seatSelectorStyles.summaryContainer}>
+                            <h3 className={seatSelectorStyles.summaryTitle}>
+                                <Ticket size={19} />
+                                Booking Summary
+                            </h3>
+                            <div className=' space-y-4'>
+                                <div className={seatSelectorStyles.summaryItem}>
+                                    <span className={seatSelectorStyles.summaryLabel}>
+                                        Selected Seats:
+                                    </span>
+                                    <span className={seatSelectorStyles.summaryValue}>
+                                        {selectedCount}
+                                    </span>
+                                </div>
+
+                                {selectedCount > 0 && (
+                                    <>
+                                        <div className={seatSelectorStyles.selectedSeatsContainer}>
+                                            <div className={seatSelectorStyles.selectedSeatsLabel}>
+                                                Selected Seats:
+                                            </div>
+                                            <div className={seatSelectorStyles.selectedSeatsList}>
+                                                {[...selected].sort().map((seat) => (
+                                                    <span
+                                                        key={seat}
+                                                        className={seatSelectorStyles.selectedSeatBadge}
+                                                    >
+                                                        {seat}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                        <div className={seatSelectorStyles.totalContainer}>
+                                            <div className={seatSelectorStyles.pricingRow}>
+                                                <span className={seatSelectorStyles.totalLabel}>
+                                                    Total Amount:
+                                                </span>
+                                                <span className={seatSelectorStyles.totalValue}>
+                                                    ₹{Math.round(total)}
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </>
+                                )}
+
+                                {selectedCount === 0 && (
+                                    <div className={seatSelectorStyles.emptyState}>
+                                        <div className={seatSelectorStyles.emptyStateTitle}>
+                                            No seat selected
+                                        </div>
+                                        <div className={seatSelectorStyles.emptyStateSubtitle}>
+                                            Select seats from the grid to continue
+                                        </div>
                                     </div>
-                                    <div className={seatSelectorStyles.pricingValueStandard}>
-                                        ₹{basePrice}
-                                    </div>
+                                )}
+
+                                <div className={seatSelectorStyles.actionButtons}>
+                                    <button
+                                        onClick={clearSelection}
+                                        disabled={selectedCount === 0}
+                                        className={seatSelectorStyles.clearButton}
+                                    >
+                                        Clear
+                                    </button>
+                                    <button
+                                        onClick={confirmBooking}
+                                        disabled={selectedCount === 0}
+                                        className={seatSelectorStyles.confirmButton}
+                                    >
+                                        Confirm Booking
+                                    </button>
                                 </div>
                             </div>
+                        </div>
 
-                            <div className={seatSelectorStyles.pricingItem}>
-                                <div className={seatSelectorStyles.pricingRow}>
-                                    <div className={seatSelectorStyles.pricingLabel}>
-                                        Recliner  
-                                    </div>
-                                    <div className={seatSelectorStyles.pricingValueStandard}>
-                                        ₹{Math.round(basePrice * 1.5)}
+                        <div className={seatSelectorStyles.pricingContainer}>
+                            <h3 className={seatSelectorStyles.pricingTitle}>
+                                <CreditCard size={18} /> Pricing Info
+                            </h3>
+                            <div className=' space-y-3'>
+                                <div className={seatSelectorStyles.pricingItem}>
+                                    <div className={seatSelectorStyles.pricingRow}>
+                                        <div className={seatSelectorStyles.pricingLabel}>
+                                            Standard
+                                        </div>
+                                        <div className={seatSelectorStyles.pricingValueStandard}>
+                                            ₹{basePrice}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div className={seatSelectorStyles.pricingNote}>
-                                All prices include taxes. No hidden charges.
+                                <div className={seatSelectorStyles.pricingItem}>
+                                    <div className={seatSelectorStyles.pricingRow}>
+                                        <div className={seatSelectorStyles.pricingLabel}>
+                                            Recliner
+                                        </div>
+                                        <div className={seatSelectorStyles.pricingValueStandard}>
+                                            ₹{Math.round(basePrice * 1.5)}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className={seatSelectorStyles.pricingNote}>
+                                    All prices include taxes. No hidden charges.
+                                </div>
                             </div>
                         </div>
                     </div>
