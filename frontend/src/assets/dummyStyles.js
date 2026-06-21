@@ -24,7 +24,7 @@ export const bannerStyles = {
   
   // Button styles
   buttonsContainer: "flex flex-wrap gap-3 font-[pacifico]",
-  bookButton: "bg-red-600 cursor-pointer hover:bg-red-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full flex items-center transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base",
+  bookButton: "bg-blue-600 cursor-pointer hover:bg-blue-700 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full flex items-center transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl text-sm sm:text-base",
   infoButton: "bg-white/20 hover:bg-white/30 text-white backdrop-blur-sm px-4 sm:px-6 py-2.5 sm:py-3 rounded-full flex items-center transition-all duration-300 border border-white/30 text-sm sm:text-base",
   
   // Icon styles
@@ -57,9 +57,9 @@ export const navbarStyles = {
   
   // Logo section
   logoContainer: "flex items-center gap-3 z-20 flex-shrink-0",
-  logoIconContainer: "bg-black p-3 md:p-3 xl:p-3 lg:p-3 rounded-full border border-red-600",
-  logoIcon: "h-4 w-4 md:h-2 md:w-2 lg:h-4 lg:w-4 xl:w-4 xl:h-4  text-red-500",
-  logoText: "text-lg md:text-sm xl:text-lg lg:tex-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-400 to-red-200 font-[pacifico]",
+  logoIconContainer: "bg-black p-3 md:p-3 xl:p-3 lg:p-3 rounded-full border border-blue-600",
+  logoIcon: "h-4 w-4 md:h-2 md:w-2 lg:h-4 lg:w-4 xl:w-4 xl:h-4  text-blue-500",
+  logoText: "text-lg md:text-sm xl:text-lg lg:tex-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-200 font-[pacifico]",
 
   // Desktop navigation
   desktopNav: "hidden lg:flex absolute left-1/2 transform -translate-x-1/2 z-10 items-center bg-black/70 backdrop-blur-md rounded-full px-3 py-2 gap-2 shadow-inner",
@@ -79,8 +79,8 @@ export const navbarStyles = {
   tabletNav: "hidden md:flex lg:hidden items-center gap-2",
   tabletNavLink: {
     base: "nav-pill-btn flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all",
-    active: "active bg-red-900/30 text-white shadow-lg",
-    inactive: "text-gray-300 hover:bg-red-900/30"
+    active: "active bg-blue-900/30 text-white shadow-lg",
+    inactive: "text-gray-300 hover:bg-blue-900/30"
   },
   tabletNavIcon: "h-4 w-4",
   tabletNavText: "text-xs font-semibold",
@@ -88,20 +88,20 @@ export const navbarStyles = {
   // Auth section
   authSection: "flex items-center gap-2",
   desktopAuth: "hidden md:block",
-  logoutButton: "flex items-center gap-2 md:px-1.5 px-4 lg:px-4 xl:px-4  py-2 rounded-full bg-gradient-to-r from-gray-700 to-gray-800 text-white text-sm font-semibold border border-red-600/20",
-  loginButton: "flex items-center gap-2 px-4 py-2 md:px-1.5 lg:px-4 xl:px-4 rounded-full bg-gradient-to-r from-red-300 to-red-700 text-white text-sm font-semibold border border-red-600/20",
+  logoutButton: "flex items-center gap-2 md:px-1.5 px-4 lg:px-4 xl:px-4  py-2 rounded-full bg-gradient-to-r from-gray-700 to-gray-800 text-white text-sm font-semibold border border-blue-600/20",
+  loginButton: "flex items-center gap-2 px-4 py-2 md:px-1.5 lg:px-4 xl:px-4 rounded-full bg-gradient-to-r from-blue-300 to-blue-700 text-white text-sm font-semibold border border-blue-600/20",
   authIcon: "h-4 w-4",
 
   // Mobile menu
   mobileMenuToggle: "md:hidden",
-  mobileMenuButton: "p-2 rounded-full bg-black/60 text-gray-200 hover:text-red-400",
+  mobileMenuButton: "p-2 rounded-full bg-black/60 text-gray-200 hover:text-blue-400",
   mobileMenuIcon: "h-6 w-6",
   mobileMenuPanel: "md:hidden absolute left-4 right-4 top-full mt-6 bg-black backdrop-blur-md rounded-2xl p-4 shadow-xl",
   mobileMenuItems: "flex flex-col gap-2",
   mobileNavLink: {
     base: "flex items-center gap-3 px-4 py-3 rounded-xl",
-    active: "bg-gradient-to-r from-red-600 to-red-500 text-white",
-    inactive: "text-gray-300 hover:bg-red-900/30"
+    active: "bg-gradient-to-r from-blue-600 to-blue-500 text-white",
+    inactive: "text-gray-300 hover:bg-blue-900/30"
   },
   mobileNavIcon: "h-5 w-5",
   mobileNavText: "font-medium",
@@ -109,7 +109,7 @@ export const navbarStyles = {
   // Mobile auth
   mobileAuthSection: "pt-2 border-t border-gray-800 mt-1",
   mobileLogoutButton: "w-full mt-3 px-4 py-3 rounded-xl bg-gradient-to-r from-gray-700 to-gray-800 text-white flex items-center justify-center gap-2",
-  mobileLoginButton: "w-full mt-3 px-4 py-3 rounded-xl bg-gradient-to-r from-red-600 to-red-500 text-white flex items-center justify-center gap-2",
+  mobileLoginButton: "w-full mt-3 px-4 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 text-white flex items-center justify-center gap-2",
   mobileAuthIcon: "h-5 w-5"
 };
 
@@ -120,7 +120,10 @@ export const navbarCSS = `
     inset: -2px;
     border-radius: 9999px;
     pointer-events: none;
-    background: linear-gradient(90deg, rgba(255,59,59,0.14), rgba(255,87,87,0.06));
+    background: linear-gradient(   90deg,
+    rgba(59, 130, 246, 0.14),
+    rgba(37, 99, 235, 0.06)
+    );
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform 0.28s ease;
@@ -137,7 +140,7 @@ export const navbarCSS = `
     width: 40%;
     border-radius: 999px;
     margin-top: 4px;
-    background: linear-gradient(90deg, #ff6b6b, #ff3b3b);
+    background: linear-gradient(90deg, #60a5fa, #2563eb);
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform 0.28s ease;
@@ -184,9 +187,9 @@ export const contactStyles = {
   pageContainer: "min-h-screen pt-15 bg-black text-white py-8 px-4 sm:px-6 lg:px-8 relative overflow-hidden",
   
   // Background elements
-  bgGradient: "absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-red-900/20 to-transparent",
-  bgBlob1: "absolute top-40 right-10 w-32 h-32 bg-red-500/10 rounded-full filter blur-xl",
-  bgBlob2: "absolute bottom-20 left-8 w-24 h-24 bg-red-700/10 rounded-full filter blur-xl",
+  bgGradient: "absolute top-0 left-0 w-full h-48 bg-gradient-to-b from-blue-900/20 to-transparent",
+  bgBlob1: "absolute top-40 right-10 w-32 h-32 bg-blue-500/10 rounded-full filter blur-xl",
+  bgBlob2: "absolute bottom-20 left-8 w-24 h-24 bg-blue-700/10 rounded-full filter blur-xl",
   
   // Film strip effects
   filmStripTop: "absolute top-0 left-0 w-full h-4 flex gap-8",
@@ -199,7 +202,7 @@ export const contactStyles = {
   // Header styles
   headerContainer: "text-center font-[pacifico] mb-12",
   headerTitle: "text-4xl md:text-6xl font-bold",
-  headerTitleRed: "text-red-400",
+  headerTitleRed: "text-blue-400",
   headerTitleWhite: "text-white",
   headerSubtitle: "text-xl text-gray-300 max-w-3xl mx-auto mt-4",
   
@@ -208,35 +211,35 @@ export const contactStyles = {
   
   // Card styles
   cardRelative: "relative",
-  cardGradient: "absolute -inset-2 bg-gradient-to-r from-red-600 to-red-800 rounded-2xl blur-md opacity-50",
-  cardContainer: "relative bg-gray-800 rounded-2xl p-6 shadow-2xl border border-red-500/30",
-  cardBadge: "absolute -top-3 left-6 bg-red-600 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center",
+  cardGradient: "absolute -inset-2 bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl blur-md opacity-50",
+  cardContainer: "relative bg-gray-800 rounded-2xl p-6 shadow-2xl border border-blue-500/30",
+  cardBadge: "absolute -top-3 left-6 bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-bold flex items-center",
   cardIcon: "h-4 w-4 mr-1",
   
   // Form styles
-  formTitle: "text-2xl font-bold mb-6 font-[pacifico] text-red-400 flex items-center pt-2",
+  formTitle: "text-2xl font-bold mb-6 font-[pacifico] text-blue-400 flex items-center pt-2",
   formTitleIcon: "mr-3",
   form: "space-y-5",
   formGrid: "grid grid-cols-1 md:grid-cols-2 gap-5",
   
   // Input styles
   inputGroup: "block text-sm font-medium text-gray-300 mb-2",
-  input: "w-full px-4 py-2.5 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300",
-  textarea: "w-full px-4 py-2.5 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300",
-  select: "w-full px-4 py-2.5 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-300",
+  input: "w-full px-4 py-2.5 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300",
+  textarea: "w-full px-4 py-2.5 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300",
+  select: "w-full px-4 py-2.5 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300",
   
   // Button styles
-  submitButton: "w-full bg-gradient-to-r from-red-600 to-red-800 text-white py-3 px-6 rounded-full font-bold flex items-center justify-center transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer hover:to-red-900 group",
+  submitButton: "w-full bg-gradient-to-r from-blue-600 to-blue-800 text-white py-3 px-6 rounded-full font-bold flex items-center justify-center transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl cursor-pointer hover:to-blue-900 group",
   buttonIcon: "ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform",
   
   // Contact info styles
   contactInfo: "space-y-5",
   contactItem: "flex items-start group",
-  contactIconContainer: "bg-red-600 p-2 rounded-full mr-4 transition-transform",
+  contactIconContainer: "bg-blue-600 p-2 rounded-full mr-4 transition-transform",
   contactIcon: "h-5 w-5",
   contactText: "text-lg font-semibold mb-1",
   contactDetail: "text-gray-300",
-  contactSubDetail: "text-sm text-red-400 mt-1",
+  contactSubDetail: "text-sm text-blue-400 mt-1",
   
   // Emergency card styles
   emergencyCardGradient: "absolute -inset-2 bg-gradient-to-r from-amber-600 to-amber-800 rounded-2xl blur-lg opacity-50",
@@ -261,7 +264,7 @@ export const moviesPageStyles = {
   categoriesFlex: "flex flex-wrap gap-4 justify-center",
   categoryButton: {
     base: "px-6 py-3 rounded-full cursor-pointer transition-all duration-300",
-    active: "bg-red-600 text-white shadow-lg shadow-red-600/30",
+    active: "bg-blue-600 text-white shadow-lg shadow-blue-600/30",
     inactive: "bg-gray-800 text-gray-300 hover:bg-gray-700"
   },
 
@@ -284,25 +287,25 @@ export const moviesPageStyles = {
 
   // Show more button
   showMoreContainer: "mt-8 flex justify-center",
-  showMoreButton: "px-6 py-3 cursor-pointer rounded-full text-white border border-white/10 bg-gradient-to-b from-red-500 to-red-700 transition"
+  showMoreButton: "px-6 py-3 cursor-pointer rounded-full text-white border border-white/10 bg-gradient-to-b from-blue-500 to-blue-700 transition"
 };
 
 // Add to src/assets/dummyStyles.js
 export const footerStyles = {
   // Main container
-  footer: "relative bg-black text-white overflow-hidden border-t border-red-800",
+  footer: "relative bg-black text-white overflow-hidden border-t border-blue-800",
   
   // Animated border
-  animatedBorder: "absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-600 to-transparent animate-pulse",
+  animatedBorder: "absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-blue-600 to-transparent animate-pulse",
   
   // Background elements
   bgContainer: "absolute inset-0 opacity-5 pointer-events-none",
-  bgGlow1: "absolute -top-12 -left-12 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 bg-red-600 rounded-full filter blur-3xl animate-pulse",
-  bgGlow2: "absolute -right-16 -bottom-16 w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-red-800 rounded-full filter blur-3xl",
+  bgGlow1: "absolute -top-12 -left-12 w-40 h-40 sm:w-56 sm:h-56 md:w-72 md:h-72 bg-blue-600 rounded-full filter blur-3xl animate-pulse",
+  bgGlow2: "absolute -right-16 -bottom-16 w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 bg-blue-800 rounded-full filter blur-3xl",
   
   // Floating icons
   floatingIconsContainer: "absolute inset-0 opacity-10 pointer-events-none hidden md:block",
-  floatingIcon: "absolute text-red-600",
+  floatingIcon: "absolute text-blue-600",
   
   // Main content
   mainContainer: "relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-14 md:py-16",
@@ -311,36 +314,36 @@ export const footerStyles = {
   // Brand section
   brandContainer: "lg:col-span-1",
   brandLogoContainer: "flex items-center mb-4 sm:mb-6",
-  logoGlow: "absolute -inset-1 sm:-inset-2 bg-red-600 rounded-full blur opacity-75 animate-pulse",
-  logoContainer: "relative bg-black p-2 sm:p-3 rounded-full border border-red-600",
-  logoIcon: "h-7 w-7 sm:h-8 sm:w-8 text-red-500",
-  brandTitle: "ml-3 sm:ml-4 text-2xl sm:text-3xl font-bold text-red-600",
+  logoGlow: "absolute -inset-1 sm:-inset-2 bg-blue-600 rounded-full blur opacity-75 animate-pulse",
+  logoContainer: "relative bg-black p-2 sm:p-3 rounded-full border border-blue-600",
+  logoIcon: "h-7 w-7 sm:h-8 sm:w-8 text-blue-500",
+  brandTitle: "ml-3 sm:ml-4 text-2xl sm:text-3xl font-bold text-blue-600",
   brandTitleWhite: "text-white",
   brandDescription: "text-gray-400 mb-6 sm:mb-8 font-light text-sm sm:text-base leading-relaxed",
   socialContainer: "flex space-x-3 sm:space-x-5",
-  socialLink: "text-gray-400 p-2 sm:p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-red-500 border border-gray-800 hover:border-red-600",
+  socialLink: "text-gray-400 p-2 sm:p-3 rounded-full transform transition-all duration-300 hover:scale-110 hover:text-blue-500 border border-gray-800 hover:border-blue-600",
   socialIcon: "h-4 w-4 sm:h-5 sm:w-5",
   
   // Section headers
-  sectionHeader: "text-lg sm:text-xl font-bold mb-6 sm:mb-8 flex items-center text-red-600",
-  sectionDot: "w-2.5 h-2.5 bg-red-600 rounded-full mr-3 animate-pulse",
+  sectionHeader: "text-lg sm:text-xl font-bold mb-6 sm:mb-8 flex items-center text-blue-600",
+  sectionDot: "w-2.5 h-2.5 bg-blue-600 rounded-full mr-3 animate-pulse",
   
   // Links
   linksList: "space-y-3 sm:space-y-4",
-  linkItem: "text-gray-400 hover:text-red-500 transition-all duration-300 flex items-center group transform hover:translate-x-2 text-sm sm:text-base",
-  linkDot: "w-2 h-2 bg-red-600 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-block",
+  linkItem: "text-gray-400 hover:text-blue-500 transition-all duration-300 flex items-center group transform hover:translate-x-2 text-sm sm:text-base",
+  linkDot: "w-2 h-2 bg-blue-600 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 inline-block",
   
   // Contact info
   contactList: "space-y-4 sm:space-y-5 text-sm sm:text-base",
   contactItem: "flex items-start",
-  contactIconContainer: "bg-black p-2 rounded-lg mr-3 border border-red-600",
-  contactIcon: "h-4 w-4 sm:h-5 sm:w-5 text-red-500",
+  contactIconContainer: "bg-black p-2 rounded-lg mr-3 border border-blue-600",
+  contactIcon: "h-4 w-4 sm:h-5 sm:w-5 text-blue-500",
   contactText: "text-gray-400",
   
   // Divider
-  divider: "relative h-px bg-gradient-to-r from-transparent via-red-600 to-transparent mb-8 sm:mb-10",
-  dividerIconContainer: "absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black p-1.5 sm:p-2 rounded-full border border-red-600",
-  dividerIcon: "h-5 w-5 sm:h-6 sm:w-6 text-red-500",
+  divider: "relative h-px bg-gradient-to-r from-transparent via-blue-600 to-transparent mb-8 sm:mb-10",
+  dividerIconContainer: "absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black p-1.5 sm:p-2 rounded-full border border-blue-600",
+  dividerIcon: "h-5 w-5 sm:h-6 sm:w-6 text-blue-500",
   
   // Bottom bar
   bottomBar: "flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0",
@@ -348,10 +351,10 @@ export const footerStyles = {
   designedByText: "text-gray-500 mr-2 text-xs sm:text-sm",
   designedByLink: "text-gray-500 font-medium hover:text-blue-500 transition-colors duration-300 text-xs sm:text-sm",
   policyLinks: "flex space-x-4 sm:space-x-6 text-xs sm:text-sm",
-  policyLink: "text-gray-500 hover:text-red-500 transition-colors duration-300",
+  policyLink: "text-gray-500 hover:text-blue-500 transition-colors duration-300",
   
   // Scroll to top button
-  scrollTopButton: "fixed bottom-4 sm:bottom-6 right-4 sm:right-6 cursor-pointer bg-red-700 hover:bg-red-600 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 z-20 group border border-red-500",
+  scrollTopButton: "fixed bottom-4 sm:bottom-6 right-4 sm:right-6 cursor-pointer bg-blue-700 hover:bg-blue-600 text-white p-3 sm:p-4 rounded-full shadow-lg transition-all duration-300 transform hover:-translate-y-1 z-20 group border border-blue-500",
   scrollTopIcon: "h-5 w-5 sm:h-6 sm:w-6",
   
   // Custom CSS
@@ -401,7 +404,7 @@ export const moviesStyles = {
   titleContainer: "flex items-center justify-center gap-2",
   
   // Tickets icon
-  ticketsIcon: "h-4 w-4 text-red-600",
+  ticketsIcon: "h-4 w-4 text-blue-600",
   
   // Movie title
   movieTitle: "text-base sm:text-lg font-medium truncate",
@@ -421,35 +424,35 @@ export const loginStyles = {
   
   // Back button
   backButtonContainer: "mb-4 sm:mb-6 xl:mb-2 md:mb-0",
-  backButton: "inline-flex xl:-ml-100 md:-ml-30 items-center text-red-400 hover:text-red-300 transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2",
+  backButton: "inline-flex xl:-ml-100 md:-ml-30 items-center text-blue-400 hover:text-blue-300 transition-all duration-300 group focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2",
   backButtonIcon: "mr-2 transform group-hover:-translate-x-1 transition-transform",
   backButtonText: "font-medium text-sm sm:text-base",
   
   // Card styles
   cardContainer: "relative md:mt-10 bg-gray-900/90 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden border border-gray-700 animate-border",
-  cardHeader: "relative h-2 bg-gradient-to-r from-red-700 via-red-600 to-red-700",
+  cardHeader: "relative h-2 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700",
   cardContent: "px-6 sm:px-8 py-8 sm:py-10",
   
   // Header section
   headerContainer: "text-center mb-6 sm:mb-8",
   headerIconContainer: "flex justify-center items-center mb-3 sm:mb-4",
-  headerIcon: "text-red-500 mr-2",
+  headerIcon: "text-blue-500 mr-2",
   headerTitle: "text-3xl sm:text-4xl font-bold text-white font-cinema leading-tight",
-  headerSubtitle: "text-red-200 mt-1 sm:mt-2 font-medium text-sm sm:text-base",
+  headerSubtitle: "text-blue-200 mt-1 sm:mt-2 font-medium text-sm sm:text-base",
   
   // Form styles
   formContainer: "space-y-4 sm:space-y-6",
   inputGroup: "mb-4 sm:mb-6",
-  label: "block text-red-100 text-sm font-bold mb-2 font-cinema",
+  label: "block text-blue-100 text-sm font-bold mb-2 font-cinema",
   inputContainer: "relative",
-  input: "w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-800/60 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none transition-all duration-200 border border-gray-700 placeholder-gray-500",
-  inputWithIcon: "w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-800/60 text-white rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none transition-all duration-200 border border-gray-700 pr-10",
+  input: "w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-800/60 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-200 border border-gray-700 placeholder-gray-500",
+  inputWithIcon: "w-full px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-800/60 text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all duration-200 border border-gray-700 pr-10",
   inputIcon: "absolute right-3 top-2.5 sm:top-3",
   passwordToggle: "absolute inset-y-0 right-0 px-2 sm:px-3 flex items-center focus:outline-none",
-  passwordToggleIcon: "text-red-300",
+  passwordToggleIcon: "text-blue-300",
   
   // Submit button
-  submitButton: "w-full bg-gradient-to-r from-red-700 to-red-800 text-white font-bold py-2.5 sm:py-3 px-4 rounded-full hover:opacity-90 transition-all cursor-pointer duration-300 transform focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shadow-lg shadow-red-900/30",
+  submitButton: "w-full bg-gradient-to-r from-blue-700 to-blue-800 text-white font-bold py-2.5 sm:py-3 px-4 rounded-full hover:opacity-90 transition-all cursor-pointer duration-300 transform focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 shadow-lg shadow-blue-900/30",
   submitButtonDisabled: "opacity-80 cursor-not-allowed",
   loadingSpinner: "animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2",
   buttonContent: "flex items-center justify-center",
@@ -459,41 +462,42 @@ export const loginStyles = {
   // Footer link
   footerContainer: "text-center mt-6 sm:mt-8",
   footerText: "text-gray-400 text-sm sm:text-base",
-  footerLink: "text-red-400 hover:text-red-300 font-medium transition duration-200 underline hover:no-underline",
+  footerLink: "text-blue-400 hover:text-blue-300 font-medium transition duration-200 underline hover:no-underline",
   
   // Custom CSS
   customCSS: `
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-    @keyframes borderAnimation {
-      0% {
-        box-shadow: 0 0 0 1px #dc2626, 0 0 20px 2px rgba(220, 38, 38, 0.3);
-      }
-      50% {
-        box-shadow: 0 0 0 2px #dc2626, 0 0 30px 4px rgba(220, 38, 38, 0.5);
-      }
-      100% {
-        box-shadow: 0 0 0 1px #dc2626, 0 0 20px 2px rgba(220, 38, 38, 0.3);
-      }
+  @keyframes borderAnimation {
+    0% {
+      box-shadow: 0 0 0 1px #2563eb, 0 0 20px 2px rgba(37, 99, 235, 0.3);
     }
+    50% {
+      box-shadow: 0 0 0 2px #2563eb, 0 0 30px 4px rgba(37, 99, 235, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 0 1px #2563eb, 0 0 20px 2px rgba(37, 99, 235, 0.3);
+    }
+  }
 
-    .animate-border {
-      animation: borderAnimation 3s infinite ease-in-out;
-    }
+  .animate-border {
+    animation: borderAnimation 3s infinite ease-in-out;
+  }
 
-    .font-cinema {
-      font-family: 'Bebas Neue', cursive;
-      letter-spacing: 1px;
-    }
+  .font-cinema {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 1px;
+  }
 
-    /* small tweak so the top/bottom film strip circles don't overcrowd on very small screens */
-    @media (max-width: 420px) {
-      .absolute.top-0 > div, .absolute.bottom-0 > div {
-        width: 3rem;
-        height: 3rem;
-      }
+  /* small tweak so the top/bottom film strip circles don't overcrowd on very small screens */
+  @media (max-width: 420px) {
+    .absolute.top-0 > div,
+    .absolute.bottom-0 > div {
+      width: 3rem;
+      height: 3rem;
     }
-  `
+  }
+`
 };
 
 
@@ -507,18 +511,18 @@ export const newsStyles = {
   header: "container mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 pb-6",
   headerFlex: "flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4",
   logoContainer: "flex items-center gap-4",
-  logoText: "text-3xl sm:text-4xl md:text-5xl text-red-600 tracking-wider",
+  logoText: "text-3xl sm:text-4xl md:text-5xl text-blue-600 tracking-wider",
   logoSubtitle: "text-xs sm:text-sm text-gray-600 font-medium",
   
   // Header buttons
   headerButtons: "flex items-center gap-3 w-full sm:w-auto",
-  latestNewsButton: "ml-auto inline-flex cursor-pointer bg-gradient-to-r from-red-400 to-red-500 items-center gap-2 text-white px-3 sm:px-4 py-2 rounded-full hover:shadow-lg transition",
+  latestNewsButton: "ml-auto inline-flex cursor-pointer bg-gradient-to-r from-blue-400 to-blue-500 items-center gap-2 text-white px-3 sm:px-4 py-2 rounded-full hover:shadow-lg transition",
   buttonIcon: "size-16",
   buttonText: "text-xs sm:text-sm",
   
   // Hero stripe
-  heroStripe: "mt-5 sm:mt-6 flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-red-50 via-white to-red-50 p-1",
-  featuredBadge: "text-xs text-red-600 font-semibold px-3 sm:px-4",
+  heroStripe: "mt-5 sm:mt-6 flex items-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-blue-50 via-white to-blue-50 p-1",
+  featuredBadge: "text-xs text-blue-600 font-semibold px-3 sm:px-4",
   stripeText: "flex-1 text-xs sm:text-sm text-gray-600 line-clamp-1",
   stripeIcon: "px-3 sm:px-4",
   
@@ -533,7 +537,7 @@ export const newsStyles = {
   heroImg: "w-full h-full object-cover",
   heroOverlay: "absolute inset-0 bg-gradient-to-t from-black/75 to-transparent opacity-0 animate-fadeIn",
   heroContent: "absolute left-5 sm:left-8 bottom-5 sm:bottom-8 right-5 sm:right-8",
-  heroCategory: "inline-block bg-red-600 text-white text-xs px-3 py-1 rounded-full font-semibold",
+  heroCategory: "inline-block bg-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold",
   heroTitle: "mt-3 sm:mt-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white",
   heroExcerpt: "mt-2 text-xs sm:text-sm md:text-base text-gray-300 max-w-full sm:max-w-3xl",
   heroMeta: "mt-4 sm:mt-6 flex flex-wrap items-center gap-3 text-gray-200",
@@ -549,7 +553,7 @@ export const newsStyles = {
   articleCard: "group relative overflow-hidden rounded-2xl bg-white border border-gray-100 p-0 shadow-md transform transition hover:-translate-y-2 hover:shadow-xl flex flex-col h-full",
   articleImage: "relative h-40 sm:h-36 md:h-32 w-full",
   articleImg: "w-full h-full object-cover transition-transform duration-500 ",
-  articleCategory: "absolute left-3 bottom-3 bg-red-600 text-white px-2 py-1 rounded-md text-xs font-semibold",
+  articleCategory: "absolute left-3 bottom-3 bg-blue-600 text-white px-2 py-1 rounded-md text-xs font-semibold",
   articleContent: "p-3 sm:p-4 flex-1 flex flex-col",
   articleTitle: "text-base sm:text-lg font-semibold",
   articleExcerpt: "mt-2 text-xs sm:text-sm text-gray-600 line-clamp-4",
@@ -562,17 +566,17 @@ export const newsStyles = {
   sidebarImage: "w-28 sm:w-32 h-28 sm:h-32 overflow-hidden flex-shrink-0 rounded-l-2xl",
   sidebarImg: "w-full h-full object-cover",
   sidebarContent: "p-3 sm:p-4 flex-1",
-  sidebarCategory: "text-xs bg-red-50 text-red-600 px-2 py-1 rounded-md font-semibold",
+  sidebarCategory: "text-xs bg-blue-50 text-blue-600 px-2 py-1 rounded-md font-semibold",
   sidebarTitle: "mt-2 font-semibold text-gray-900 text-sm sm:text-base",
   sidebarExcerpt: "mt-1 text-xs sm:text-sm text-gray-600 line-clamp-4",
   
   // Subscribe card
-  subscribeCard: "rounded-2xl p-4 sm:p-6 bg-gradient-to-b from-white to-red-50 border border-red-100 shadow-md",
+  subscribeCard: "rounded-2xl p-4 sm:p-6 bg-gradient-to-b from-white to-blue-50 border border-blue-100 shadow-md",
   subscribeTitle: "text-base sm:text-lg font-semibold",
   subscribeText: "mt-2 text-xs sm:text-sm text-gray-600",
   subscribeForm: "mt-3 sm:mt-4 flex gap-2",
   subscribeInput: "flex-1 px-3 sm:px-4 py-2 rounded-xl border border-gray-200 outline-none text-sm",
-  subscribeButton: "inline-flex cursor-pointer items-center gap-2 bg-red-600 text-white px-2 sm:px-4 py-2 rounded-xl shadow hover:bg-red-700 transition text-sm"
+  subscribeButton: "inline-flex cursor-pointer items-center gap-2 bg-blue-600 text-white px-2 sm:px-4 py-2 rounded-xl shadow hover:bg-blue-700 transition text-sm"
 };
 
 // CSS styles for the News component
@@ -621,7 +625,7 @@ export const releasesStyles = {
   
   // Header section
   headerContainer: "text-center mb-12 mt-6",
-  headerTitle: "font-bold text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-red-400 via-red-600 to-pink-500 font-[pacifico]",
+  headerTitle: "font-bold text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-600 to-pink-500 font-[pacifico]",
   headerSubtitle: "mt-4 text-xl text-gray-300",
   
   // Movie grid
@@ -648,7 +652,7 @@ export const seatSelectorStyles = {
   
   // Header
   headerContainer: "flex items-center mb-8 gap-4",
-  backButton: "inline-flex items-center gap-2 text-red-300 hover:text-white transition-all px-4 py-3 rounded-xl hover:bg-red-900/20",
+  backButton: "inline-flex items-center gap-2 text-blue-300 hover:text-white transition-all px-4 py-3 rounded-xl hover:bg-blue-900/20",
   backButtonIcon: "size-6",
   titleContainer: "flex-1 text-center",
   movieTitle: "text-4xl md:text-6xl py-1 font-bold tracking-wider mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent",
@@ -661,24 +665,24 @@ export const seatSelectorStyles = {
   screenSubtext: "text-xs text-gray-200 mt-2",
   
   // Main content
-  mainContent: "bg-gradient-to-br from-black/80 to-gray-900 rounded-3xl p-8 border border-red-700/10 shadow-2xl",
+  mainContent: "bg-gradient-to-br from-black/80 to-gray-900 rounded-3xl p-8 border border-blue-700/10 shadow-2xl",
   sectionHeader: "flex justify-center mb-6",
   sectionTitleContainer: "text-center",
   sectionTitle: "text-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-bold mb-2 flex items-center justify-center gap-2",
-  titleDivider: "w-20 h-1 bg-gradient-to-r from-red-500 to-transparent mx-auto",
+  titleDivider: "w-20 h-1 bg-gradient-to-r from-blue-500 to-transparent mx-auto",
   
   // Seat grid
   seatGridContainer: "flex flex-col items-center gap-6",
   rowContainer: "w-full max-w-4xl flex flex-col items-center",
   rowHeader: "w-full flex items-center justify-center mb-3",
-  rowLabel: "w-12 mx-2 text-lg font-bold text-red-400 text-center",
+  rowLabel: "w-12 mx-2 text-lg font-bold text-blue-400 text-center",
   rowType: "w-20 px-5 text-sm font-semibold text-gray-400 capitalize text-center",
   
   // Seat buttons
   seatGrid: "seat-grid",
   seatButton: "seat-btn flex items-center justify-center text-sm font-semibold cursor-pointer transition-transform duration-200 transform hover:scale-105",
   seatButtonBooked: "opacity-40 cursor-not-allowed bg-gray-800 text-gray-500",
-  seatButtonSelectedStandard: "bg-gradient-to-br from-red-500 to-red-700 text-white shadow-2xl",
+  seatButtonSelectedStandard: "bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-2xl",
   seatButtonSelectedRecliner: "bg-gradient-to-br from-green-500 to-green-700 text-white shadow-2xl",
   seatButtonAvailableStandard: "bg-gray-800 text-gray-200",
   seatButtonAvailableRecliner: "bg-green-900 text-green-200",
@@ -692,18 +696,18 @@ export const seatSelectorStyles = {
   summaryTitle: "text-lg font-bold mb-4 flex items-center gap-2",
   summaryItem: "flex justify-between items-center p-3 bg-black/40 rounded-xl",
   summaryLabel: "text-gray-300",
-  summaryValue: "font-bold text-red-300 text-lg",
+  summaryValue: "font-bold text-blue-300 text-lg",
   
   // Selected seats
   selectedSeatsContainer: "p-3 bg-black/30 cursor-pointer rounded-xl",
   selectedSeatsLabel: "text-sm text-gray-400 mb-2",
   selectedSeatsList: "flex flex-wrap gap-2",
-  selectedSeatBadge: "px-3 py-1 rounded-full text-sm bg-red-500/20 text-red-300",
+  selectedSeatBadge: "px-3 py-1 rounded-full text-sm bg-blue-500/20 text-blue-300",
   
   // Total amount
-  totalContainer: "p-3 bg-gradient-to-r from-red-900/20 to-transparent rounded-xl",
+  totalContainer: "p-3 bg-gradient-to-r from-blue-900/20 to-transparent rounded-xl",
   totalLabel: "text-gray-300 font-semibold",
-  totalValue: "font-bold text-red-400 text-2xl",
+  totalValue: "font-bold text-blue-400 text-2xl",
   
   // Empty state
   emptyState: "text-center py-6 text-gray-500",
@@ -713,7 +717,7 @@ export const seatSelectorStyles = {
   // Action buttons
   actionButtons: "flex gap-3 mt-4",
   clearButton: "flex-1 px-4 py-3 rounded-full cursor-pointer bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed",
-  confirmButton: "flex-1 px-4 py-3 rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold hover:from-red-700 hover:to-red-800 transition-all transform cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed",
+  confirmButton: "flex-1 px-4 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold hover:from-blue-700 hover:to-blue-800 transition-all transform cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed",
   
   // Pricing info
   pricingContainer: "bg-black/30 p-6 rounded-2xl",
@@ -721,7 +725,7 @@ export const seatSelectorStyles = {
   pricingItem: "p-3 rounded-xl bg-black/40",
   pricingRow: "flex justify-between",
   pricingLabel: "text-sm text-gray-300",
-  pricingValueStandard: "font-bold text-red-400",
+  pricingValueStandard: "font-bold text-blue-400",
   pricingValueRecliner: "font-bold text-green-400",
   pricingNote: "text-xs text-gray-500",
   
@@ -774,56 +778,56 @@ export const signUpStyles = {
   
   // Background elements
   particlesContainer: "absolute inset-0 z-0",
-  particle: "absolute w-2 h-2 bg-red-500 rounded-full opacity-20 animate-float",
+  particle: "absolute w-2 h-2 bg-blue-500 rounded-full opacity-20 animate-float",
   gradientOrbs: "absolute inset-0 z-0 opacity-10",
-  orb1: "absolute top-1/4 left-1/4 w-64 h-64 bg-red-600 rounded-full filter blur-3xl animate-pulse",
-  orb2: "absolute bottom-1/3 right-1/4 w-56 h-56 bg-red-800 rounded-full filter blur-3xl animate-pulse delay-1000",
+  orb1: "absolute top-1/4 left-1/4 w-64 h-64 bg-blue-600 rounded-full filter blur-3xl animate-pulse",
+  orb2: "absolute bottom-1/3 right-1/4 w-56 h-56 bg-blue-800 rounded-full filter blur-3xl animate-pulse delay-1000",
   
   // Main content
   mainContent: "relative mt-10 w-full max-w-2xl z-10",
   
   // Back button
-  backButton: "absolute -top-10 -left-1 xl:-left-90 lg:-left-40 cursor-pointer flex items-center text-red-400 hover:text-red-300 transition-all duration-300 group mb-4",
+  backButton: "absolute -top-10 -left-1 xl:-left-90 lg:-left-40 cursor-pointer flex items-center text-blue-400 hover:text-blue-300 transition-all duration-300 group mb-4",
   backIcon: "group-hover:-translate-x-1 transition-transform",
   backText: "ml-2 text-sm font-medium font-cinema",
   
   // Card
   card: "relative bg-gray-900/80 backdrop-blur-lg rounded-xl shadow-2xl overflow-hidden border border-gray-700 animate-border",
-  cardHeader: "relative h-1 bg-gradient-to-r from-red-600 via-red-500 to-red-600",
+  cardHeader: "relative h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600",
   cardContent: "px-8 py-8",
   
   // Header
   header: "text-center mb-8",
   headerFlex: "flex justify-center items-center mb-3",
-  headerIcon: "text-red-400 mr-2",
+  headerIcon: "text-blue-400 mr-2",
   headerTitle: "text-3xl font-bold text-white font-cinema",
-  headerSubtitle: "text-red-200 text-sm mt-1 font-medium",
+  headerSubtitle: "text-blue-200 text-sm mt-1 font-medium",
   
   // Form
   form: "space-y-6",
   formGrid: "grid grid-cols-1 md:grid-cols-2 gap-6",
   
   // Form fields
-  field: "block text-red-100 text-sm font-bold mb-2 font-cinema",
+  field: "block text-blue-100 text-sm font-bold mb-2 font-cinema",
   inputContainer: "relative",
   input: {
     base: "w-full px-4 py-3 bg-gray-800/50 text-white rounded-lg focus:ring-2 focus:outline-none transition-all duration-200 border pl-12",
-    error: "border-red-500 focus:ring-red-500",
-    normal: "border-gray-600 focus:ring-red-400"
+    error: "border-blue-500 focus:ring-blue-500",
+    normal: "border-gray-600 focus:ring-blue-400"
   },
   inputWithIcon: "pl-12",
   inputWithToggle: "pl-12 pr-12",
-  inputIcon: "absolute left-4 top-3.5 text-red-400",
-  errorText: "text-red-400 text-xs mt-1",
+  inputIcon: "absolute left-4 top-3.5 text-blue-400",
+  errorText: "text-blue-400 text-xs mt-1",
   
   // Password toggle
   passwordToggle: "absolute right-4 top-3.5",
-  toggleIcon: "text-red-300",
+  toggleIcon: "text-blue-300",
   
   // Submit button
   submitContainer: "pt-4",
   submitButton: {
-    base: "w-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold py-3 px-4 rounded-full hover:opacity-90 transition-all duration-300 transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 shadow-lg shadow-red-900/30 text-base",
+    base: "w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-3 px-4 rounded-full hover:opacity-90 transition-all duration-300 transform cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 shadow-lg shadow-blue-900/30 text-base",
     loading: "opacity-80 cursor-not-allowed"
   },
   loadingSpinner: "animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2",
@@ -833,7 +837,7 @@ export const signUpStyles = {
   // Login link
   loginContainer: "mt-6 text-center",
   loginText: "text-gray-400 text-sm",
-  loginLink: "text-red-400 hover:text-red-300 font-medium transition duration-200 underline hover:no-underline"
+  loginLink: "text-blue-400 hover:text-blue-300 font-medium transition duration-200 underline hover:no-underline"
 };
 
 // CSS styles for the SignUp component
@@ -919,20 +923,20 @@ export const trailersStyles = {
   leftSide: "w-full md:w-1/2 lg:w-2/5",
   leftCard: "bg-white font-[pacifico] rounded-xl shadow-lg p-5 md:p-6",
   leftTitle: "text-2xl font-semibold mb-4 flex items-center gap-2",
-  titleIcon: "text-red-600",
+  titleIcon: "text-blue-600",
   
   // Carousel controls
   carouselControls: "flex items-center justify-between mb-3",
   controlButtons: "flex items-center gap-2",
-  controlButton: "p-2 rounded-full bg-gray-100 hover:bg-red-100 text-red-600 transition-colors",
+  controlButton: " cursor-pointer p-2 rounded-full bg-gray-100 hover:bg-blue-100 text-blue-600 transition-colors",
   trailerCount: "text-sm text-gray-500",
   
   // Carousel
   carousel: "flex overflow-x-auto scrollbar-hide space-x-3 pb-3 -mx-1",
   carouselItem: {
     base: "flex-none rounded-lg overflow-hidden relative cursor-pointer transition-all transform",
-    active: "ring-2 ring-red-600 shadow-md scale-100",
-    inactive: "hover:scale-[1.02] hover:ring-1 hover:ring-red-400"
+    active: "ring-2 ring-blue-600 shadow-md scale-100",
+    inactive: "hover:scale-[1.02] hover:ring-1 hover:ring-blue-400"
   },
   carouselImage: "w-full h-full object-cover",
   carouselOverlay: "absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-2",
@@ -942,7 +946,7 @@ export const trailersStyles = {
   // Now Trending section
   trendingSection: "mt-6 space-y-3",
   trendingTitle: "font-bold text-lg",
-  trendingItem: "flex items-center space-x-3 p-2 rounded-lg hover:bg-red-50 cursor-pointer transition-colors",
+  trendingItem: "flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-50 cursor-pointer transition-colors",
   trendingImage: "w-14 h-14 rounded-md overflow-hidden flex-shrink-0",
   trendingImageSrc: "w-full h-full object-cover",
   trendingContent: "",
@@ -964,7 +968,7 @@ export const trailersStyles = {
   thumbnailContainer: "relative aspect-video group bg-gray-900",
   thumbnailImage: "w-full h-full object-cover",
   playButtonContainer: "absolute inset-0 flex items-center justify-center",
-  playButton: "bg-red-600 hover:bg-red-700 cursor-pointer rounded-full p-4 md:p-5 transition-all transform group-hover:scale-110",
+  playButton: "bg-blue-600 hover:bg-blue-700 cursor-pointer rounded-full p-4 md:p-5 transition-all transform group-hover:scale-110",
   playIcon: "size-32 fill-white",
   
   // Trailer Info
@@ -973,11 +977,11 @@ export const trailersStyles = {
   trailerTitle: "text-2xl font-bold font-dancing",
   trailerMeta: "flex items-center space-x-4 text-sm text-gray-700",
   metaItem: "flex items-center",
-  metaIcon: "mr-1 text-red-600",
+  metaIcon: "mr-1 text-blue-600",
   
   // Genre tags
   genreContainer: "mt-4 flex flex-wrap gap-2",
-  genreTag: "px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-medium",
+  genreTag: "px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium",
   
   // Description
   description: "mt-4 text-gray-700",
@@ -1054,7 +1058,7 @@ export const seatSelectorHStyles = {
   
   // Header
   headerContainer: "flex items-center mb-8 gap-4",
-  backButton: "inline-flex items-center gap-2 text-red-300 hover:text-white transition-all px-4 py-3 rounded-xl hover:bg-red-900/20",
+  backButton: "inline-flex items-center gap-2 text-blue-300 hover:text-white transition-all px-4 py-3 rounded-xl hover:bg-blue-900/20",
   titleContainer: "flex-1 text-center",
   movieTitle: "text-4xl md:text-6xl py-1 font-bold tracking-wider mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent",
   showtimeText: "text-sm text-gray-500 mt-1 flex items-center justify-center gap-2",
@@ -1066,24 +1070,24 @@ export const seatSelectorHStyles = {
   screenSubtext: "text-xs text-gray-200 mt-2",
   
   // Main content
-  mainContent: "bg-gradient-to-br from-black/80 to-gray-900 rounded-3xl p-8 border border-red-700/10 shadow-2xl",
+  mainContent: "bg-gradient-to-br from-black/80 to-gray-900 rounded-3xl p-8 border border-blue-700/10 shadow-2xl",
   sectionHeader: "flex justify-center mb-6",
   sectionTitleContainer: "text-center",
   sectionTitle: "text-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent font-bold mb-2 flex items-center justify-center gap-2",
-  titleDivider: "w-20 h-1 bg-gradient-to-r from-red-500 to-transparent mx-auto",
+  titleDivider: "w-20 h-1 bg-gradient-to-r from-blue-500 to-transparent mx-auto",
   
   // Seat grid
   seatGridContainer: "flex flex-col items-center gap-6",
   rowContainer: "w-full max-w-4xl flex flex-col items-center",
   rowHeader: "w-full flex items-center justify-center mb-3",
-  rowLabel: "w-12 mx-3 text-lg font-bold text-red-400 text-center",
+  rowLabel: "w-12 mx-3 text-lg font-bold text-blue-400 text-center",
   rowType: "w-20 px-3 text-sm font-semibold text-gray-400 capitalize text-center",
   
   // Seat buttons
   seatGrid: "seat-grid",
   seatButton: "seat-btn flex items-center justify-center text-sm font-semibold cursor-pointer transition-transform duration-200 transform hover:scale-105",
   seatButtonBooked: "opacity-40 cursor-not-allowed bg-gray-800 text-gray-500",
-  seatButtonSelectedStandard: "bg-gradient-to-br from-red-500 to-red-700 text-white shadow-2xl",
+  seatButtonSelectedStandard: "bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-2xl",
   seatButtonSelectedRecliner: "bg-gradient-to-br from-green-500 to-green-700 text-white shadow-2xl",
   seatButtonAvailableStandard: "bg-gray-800 text-gray-200",
   seatButtonAvailableRecliner: "bg-green-900 text-green-200",
@@ -1097,18 +1101,18 @@ export const seatSelectorHStyles = {
   summaryTitle: "text-lg font-bold mb-4 flex items-center gap-2",
   summaryItem: "flex justify-between items-center p-3 bg-black/40 rounded-xl",
   summaryLabel: "text-gray-300",
-  summaryValue: "font-bold text-red-300 text-lg",
+  summaryValue: "font-bold text-blue-300 text-lg",
   
   // Selected seats
   selectedSeatsContainer: "p-3 bg-black/30 cursor-pointer rounded-xl",
   selectedSeatsLabel: "text-sm text-gray-400 mb-2",
   selectedSeatsList: "flex flex-wrap gap-2",
-  selectedSeatBadge: "px-3 py-1 rounded-full text-sm bg-red-500/20 text-red-300",
+  selectedSeatBadge: "px-3 py-1 rounded-full text-sm bg-blue-500/20 text-blue-300",
   
   // Total amount
-  totalContainer: "p-3 bg-gradient-to-r from-red-900/20 to-transparent rounded-xl",
+  totalContainer: "p-3 bg-gradient-to-r from-blue-900/20 to-transparent rounded-xl",
   totalLabel: "text-gray-300 font-semibold",
-  totalValue: "font-bold text-red-400 text-2xl",
+  totalValue: "font-bold text-blue-400 text-2xl",
   
   // Empty state
   emptyState: "text-center py-6 text-gray-500",
@@ -1118,7 +1122,7 @@ export const seatSelectorHStyles = {
   // Action buttons
   actionButtons: "flex gap-3 mt-4",
   clearButton: "flex-1 px-4 py-3 rounded-full cursor-pointer bg-gray-800 text-gray-300 hover:bg-gray-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed",
-  confirmButton: "flex-1 px-4 py-3 rounded-full cursor-pointer bg-gradient-to-r from-red-600 to-red-700 text-white font-bold hover:from-red-700 hover:to-red-800 transition-all transform  disabled:opacity-50 disabled:cursor-not-allowed",
+  confirmButton: "flex-1 px-4 py-3 rounded-full cursor-pointer bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold hover:from-blue-700 hover:to-blue-800 transition-all transform  disabled:opacity-50 disabled:cursor-not-allowed",
   
   // Pricing info
   pricingContainer: "bg-black/30 p-6 rounded-2xl",
@@ -1126,7 +1130,7 @@ export const seatSelectorHStyles = {
   pricingItem: "p-3 rounded-xl bg-black/40",
   pricingRow: "flex justify-between",
   pricingLabel: "text-sm text-gray-300",
-  pricingValueStandard: "font-bold text-red-400",
+  pricingValueStandard: "font-bold text-blue-400",
   pricingValueRecliner: "font-bold text-green-400",
   pricingNote: "text-xs text-gray-500",
   
@@ -1167,7 +1171,7 @@ export const movieDetailStyles = {
   
   // Header
   header: "flex items-center gap-4 mb-8",
-  backButton: "inline-flex items-center gap-2 text-red-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-red-900/20",
+  backButton: "inline-flex items-center gap-2 text-blue-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-blue-900/20",
   backIcon: "size-18",
   backText: "text-sm sm:text-base",
   
@@ -1178,33 +1182,33 @@ export const movieDetailStyles = {
   metaItem: "flex items-center gap-2",
   metaIcon: "h-4 w-4",
   ratingIcon: "text-yellow-400",
-  durationIcon: "text-red-400",
-  genreTag: "px-3 py-1 bg-red-900/40 rounded-full text-red-300 text-sm border border-red-700/30",
+  durationIcon: "text-blue-400",
+  genreTag: "px-3 py-1 bg-blue-900/40 rounded-full text-blue-300 text-sm border border-blue-700/30",
   
   // Main layout
   mainLayout: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8",
   
   // Left column - Poster
   leftColumn: "lg:col-span-1 order-1 md:order-1",
-  posterCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-6 border border-red-700/20 shadow-2xl",
+  posterCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-6 border border-blue-700/20 shadow-2xl",
   posterImage: "relative overflow-hidden rounded-xl mx-auto w-full",
   posterImg: "w-full h-full object-cover rounded-xl transition-transform duration-300",
-  trailerButton: "w-full mt-6 flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold text-base sm:text-lg transition-all shadow-lg",
+  trailerButton: "w-full mt-6 flex items-center justify-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-base sm:text-lg transition-all shadow-lg",
   trailerIcon: "size-18",
   
   // Middle + Right columns
   rightColumns: "lg:col-span-2 order-2 md:order-2",
   
   // Showtimes section
-  showtimesCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-red-700/20 shadow-2xl mb-6",
-  showtimesTitle: "text-2xl sm:text-4xl font-bold mb-6 text-red-300 text-center flex items-center justify-center gap-2",
+  showtimesCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-blue-700/20 shadow-2xl mb-6",
+  showtimesTitle: "text-2xl sm:text-4xl font-bold mb-6 text-blue-300 text-center flex items-center justify-center gap-2",
   showtimesIcon: "h-6 w-6",
   
   // Day selection
   daySelection: "flex overflow-x-auto gap-2 mb-4 pb-2 sm:mb-8 sm:pb-0 scrollbar-hide",
   dayButton: {
     base: "flex-shrink-0 px-4 sm:px-6 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-300 text-sm sm:text-base",
-    active: "bg-red-600 text-white shadow-lg transform scale-105",
+    active: "bg-blue-600 text-white shadow-lg transform scale-105",
     inactive: "bg-gray-800/60 text-gray-300 hover:bg-gray-700/80"
   },
   dayName: "text-xs sm:text-sm",
@@ -1214,48 +1218,48 @@ export const movieDetailStyles = {
   showtimesGrid: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4",
   timeButton: {
     base: "px-3 sm:px-4 py-2 sm:py-3 rounded-xl text-sm sm:text-lg font-semibold transition-all duration-300 border flex items-center justify-center gap-2 text-center",
-    active: "bg-red-600 text-white border-red-500/50 transform scale-105",
-    inactive: "bg-gray-800/40 text-gray-200 border-gray-700/50 hover:bg-red-600 hover:text-white hover:border-red-500/50"
+    active: "bg-blue-600 text-white border-blue-500/50 transform scale-105",
+    inactive: "bg-gray-800/40 text-gray-200 border-gray-700/50 hover:bg-blue-600 hover:text-white hover:border-blue-500/50"
   },
-  soldOutBadge: "ml-2 px-2 py-0.5 rounded-full text-xs bg-red-700/90 text-white font-bold",
+  soldOutBadge: "ml-2 px-2 py-0.5 rounded-full text-xs bg-blue-700/90 text-white font-bold",
   
   // Proceed button
   proceedButton: "mt-4 sm:mt-6 text-center",
-  bookButton: "px-6 py-2.5 rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold text-base sm:text-lg shadow-2xl hover:from-red-700 hover:to-red-800 transition-transform transform hover:scale-105",
+  bookButton: "px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-base sm:text-lg shadow-2xl hover:from-blue-700 hover:to-blue-800 transition-transform transform hover:scale-105",
   
   // Cast section
-  castCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-red-700/20 shadow-2xl",
-  castTitle: "text-xl sm:text-3xl font-bold mb-4 sm:mb-6 text-red-300 text-center flex items-center justify-center gap-2",
+  castCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-blue-700/20 shadow-2xl",
+  castTitle: "text-xl sm:text-3xl font-bold mb-4 sm:mb-6 text-blue-300 text-center flex items-center justify-center gap-2",
   castIcon: "h-5 w-5",
   castGrid: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6",
   castItem: "text-center group",
   castImageContainer: "relative mx-auto mb-3",
-  castImage: "w-20 h-20 rounded-full object-cover mx-auto border-2 border-red-600/30 group-hover:border-red-400 transition-colors",
+  castImage: "w-20 h-20 rounded-full object-cover mx-auto border-2 border-blue-600/30 group-hover:border-blue-400 transition-colors",
   castName: "font-semibold text-base sm:text-lg",
   castRole: "text-xs sm:text-sm text-gray-400",
   noCast: "text-gray-400 col-span-full text-center py-8",
   
   // Story section
-  storyCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-red-700/20 shadow-2xl mb-8",
-  storyTitle: "text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 text-red-300 text-center",
+  storyCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-blue-700/20 shadow-2xl mb-8",
+  storyTitle: "text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 text-blue-300 text-center",
   storyText: "text-gray-300 leading-relaxed text-base sm:text-lg text-center max-w-4xl mx-auto",
   
   // Director & Producer section
   crewGrid: "grid grid-cols-1 md:grid-cols-2 gap-6 mb-8",
-  crewCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-red-700/20 shadow-2xl text-center",
+  crewCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-blue-700/20 shadow-2xl text-center",
   crewHeader: "flex items-center justify-center gap-3 mb-4",
-  crewIcon: "h-5 w-5 text-red-400",
-  crewTitle: "text-xl sm:text-3xl font-bold text-red-300",
+  crewIcon: "h-5 w-5 text-blue-400",
+  crewTitle: "text-xl sm:text-3xl font-bold text-blue-300",
   crewContent: "flex flex-col items-center",
   crewImageGrid: "flex gap-4 sm:gap-6 items-start justify-center",
-  crewImage: "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-red-600/30 mb-3 sm:mb-4",
+  crewImage: "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-blue-600/30 mb-3 sm:mb-4",
   crewName: "font-semibold text-base sm:text-xl",
   fallbackAvatar: "w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gray-700 flex items-center justify-center text-xl text-gray-300 mb-3 sm:mb-4",
   
   // Trailer modal
   modalOverlay: "fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4",
   modalContainer: "relative w-full max-w-6xl",
-  closeButton: "absolute right-0 sm:-top-10 -top-6 sm:-right-4 text-white hover:text-red-400 z-10",
+  closeButton: "absolute right-0 sm:-top-10 -top-6 sm:-right-4 text-white hover:text-blue-400 z-10",
   closeIcon: "size-36",
   videoContainer: "w-full aspect-video rounded-xl overflow-hidden",
   videoIframe: "w-full h-full rounded-xl",
@@ -1264,7 +1268,7 @@ export const movieDetailStyles = {
   notFoundContainer: "min-h-screen flex items-center justify-center bg-black text-white",
   notFoundContent: "text-center",
   notFoundTitle: "text-2xl",
-  notFoundLink: "mt-4 inline-block text-red-400 underline"
+  notFoundLink: "mt-4 inline-block text-blue-400 underline"
 };
 
 // CSS styles for the MovieDetail component
@@ -1292,7 +1296,7 @@ export const movieDetailHStyles = {
   
   // Header
   headerContainer: "flex items-center gap-4 mb-6 sm:mb-8",
-  backButton: "inline-flex items-center gap-2 text-red-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-red-900/20",
+  backButton: "inline-flex items-center gap-2 text-blue-300 hover:text-white transition-colors px-3 py-2 rounded-lg hover:bg-blue-900/20",
   backButtonText: "text-sm sm:text-base",
   
   // Movie title
@@ -1302,29 +1306,29 @@ export const movieDetailHStyles = {
   rating: "flex items-center gap-2",
   ratingIcon: "h-4 w-4 text-yellow-400",
   duration: "flex items-center gap-2",
-  durationIcon: "h-4 w-4 text-red-400",
-  genre: "px-3 py-1 bg-red-900/40 rounded-full text-red-300 text-xs sm:text-sm border border-red-700/30",
+  durationIcon: "h-4 w-4 text-blue-400",
+  genre: "px-3 py-1 bg-blue-900/40 rounded-full text-blue-300 text-xs sm:text-sm border border-blue-700/30",
   
   // Main grid layout
   mainGrid: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mb-8",
   
   // Poster section
   posterContainer: "lg:col-span-1 order-1 md:order-1",
-  posterCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-6 border border-red-700/20 shadow-2xl",
+  posterCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-6 border border-blue-700/20 shadow-2xl",
   posterImageContainer: "relative overflow-hidden rounded-xl mx-auto w-full",
   posterImage: "w-full h-full object-cover rounded-xl transition-transform duration-300",
-  trailerButton: "w-full mt-5 sm:mt-6 flex items-center justify-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold text-sm sm:text-base transition-all shadow-lg",
+  trailerButton: "w-full mt-5 sm:mt-6 flex items-center justify-center gap-3 px-5 py-3 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-sm sm:text-base transition-all shadow-lg",
   
   // Showtimes section
   showtimesContainer: "lg:col-span-2 order-2 md:order-2",
-  showtimesCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-red-700/20 shadow-2xl mb-6",
-  showtimesTitle: "text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-red-300 text-center flex items-center justify-center gap-2",
+  showtimesCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-blue-700/20 shadow-2xl mb-6",
+  showtimesTitle: "text-xl sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-blue-300 text-center flex items-center justify-center gap-2",
   showtimesTitleIcon: "h-6 w-6",
   
   // Day selection
   daySelection: "flex overflow-x-auto gap-2 mb-4 pb-2 sm:mb-6 sm:pb-0 scrollbar-hide",
   dayButton: "flex-shrink-0 px-3 sm:px-5 py-2 sm:py-3 rounded-xl font-semibold transition-all duration-300 text-xs sm:text-sm",
-  dayButtonSelected: "bg-red-600 text-white shadow-lg transform scale-105",
+  dayButtonSelected: "bg-blue-600 text-white shadow-lg transform scale-105",
   dayButtonDefault: "bg-gray-800/60 text-gray-300 hover:bg-gray-700/80",
   dayName: "text-xs",
   dayDate: "text-sm sm:text-base",
@@ -1332,49 +1336,49 @@ export const movieDetailHStyles = {
   // Showtimes grid
   showtimesGrid: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4",
   showtimeButton: "px-2 sm:px-3 py-2 sm:py-3 rounded-xl text-xs sm:text-sm md:text-base font-semibold transition-all duration-300 border flex items-center justify-center gap-2 text-center",
-  showtimeButtonSelected: "bg-red-600 text-white border-red-500/50 transform scale-105",
-  showtimeButtonDefault: "bg-gray-800/40 text-gray-200 border-gray-700/50 hover:bg-red-600 hover:text-white hover:border-red-500/50",
-  soldOutBadge: "ml-2 px-2 py-0.5 rounded-full text-xs bg-red-700/90 text-white font-bold",
+  showtimeButtonSelected: "bg-blue-600 text-white border-blue-500/50 transform scale-105",
+  showtimeButtonDefault: "bg-gray-800/40 text-gray-200 border-gray-700/50 hover:bg-blue-600 hover:text-white hover:border-blue-500/50",
+  soldOutBadge: "ml-2 px-2 py-0.5 rounded-full text-xs bg-blue-700/90 text-white font-bold",
   
   // No showtimes message
   noShowtimes: "col-span-full text-center text-gray-400 py-6",
   
   // Book now button
   bookNowContainer: "mt-4 sm:mt-6 text-center",
-  bookNowButton: "px-5 py-2.5 rounded-full bg-gradient-to-r from-red-600 to-red-700 text-white font-bold text-sm sm:text-base shadow-2xl hover:from-red-700 hover:to-red-800 transition-transform transform hover:scale-105",
+  bookNowButton: "px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold text-sm sm:text-base shadow-2xl hover:from-blue-700 hover:to-blue-800 transition-transform transform hover:scale-105",
   
   // Cast section
-  castCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-red-700/20 shadow-2xl",
-  castTitle: "text-lg sm:text-2xl font-bold mb-4 text-red-300 text-center flex items-center justify-center gap-2",
+  castCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-blue-700/20 shadow-2xl",
+  castTitle: "text-lg sm:text-2xl font-bold mb-4 text-blue-300 text-center flex items-center justify-center gap-2",
   castTitleIcon: "h-5 w-5",
   castGrid: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6",
   castMember: "text-center group",
   castImageContainer: "relative mx-auto mb-3",
-  castImage: "w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover mx-auto border-2 border-red-600/30 group-hover:border-red-400 transition-colors",
+  castImage: "w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover mx-auto border-2 border-blue-600/30 group-hover:border-blue-400 transition-colors",
   castName: "font-semibold text-sm sm:text-base",
   castRole: "text-xs sm:text-sm text-gray-400",
   noCastMessage: "text-gray-400 col-span-full text-center py-8",
   
   // Story section
-  storyCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-red-700/20 shadow-2xl mb-8",
-  storyTitle: "text-lg sm:text-2xl md:text-3xl font-bold mb-4 text-red-300 text-center",
+  storyCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-blue-700/20 shadow-2xl mb-8",
+  storyTitle: "text-lg sm:text-2xl md:text-3xl font-bold mb-4 text-blue-300 text-center",
   storyText: "text-gray-300 leading-relaxed text-sm sm:text-base md:text-lg text-center max-w-4xl mx-auto",
   
   // Director & Producer section
   crewGrid: "grid grid-cols-1 md:grid-cols-2 gap-6 mb-8",
-  crewCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-red-700/20 shadow-2xl text-center",
-  crewTitle: "text-lg sm:text-2xl md:text-3xl font-bold text-red-300 flex items-center justify-center gap-3 mb-4",
-  crewIcon: "h-5 w-5 text-red-400",
+  crewCard: "bg-gradient-to-br from-black/80 to-gray-900 rounded-2xl p-4 sm:p-8 border border-blue-700/20 shadow-2xl text-center",
+  crewTitle: "text-lg sm:text-2xl md:text-3xl font-bold text-blue-300 flex items-center justify-center gap-3 mb-4",
+  crewIcon: "h-5 w-5 text-blue-400",
   crewContent: "flex flex-col items-center",
   crewGridInner: "flex gap-4 sm:gap-6 items-start justify-center",
-  crewImage: "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-red-600/30 mb-3 sm:mb-4",
+  crewImage: "w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border-2 border-blue-600/30 mb-3 sm:mb-4",
   crewName: "font-semibold text-sm sm:text-base",
   fallbackAvatar: "w-20 h-20 sm:w-24 sm:h-24 rounded-full bg-gray-700 flex items-center justify-center text-xl text-gray-300 mb-3 sm:mb-4",
   
   // Trailer modal
   trailerModal: "fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4",
   trailerContainer: "relative w-full max-w-6xl",
-  closeButton: "absolute right-0 sm:-top-10 -top-6 sm:-right-4 text-white hover:text-red-400 z-10",
+  closeButton: "absolute right-0 sm:-top-10 -top-6 sm:-right-4 text-white hover:text-blue-400 z-10",
   trailerIframe: "w-full aspect-video rounded-xl overflow-hidden",
   iframe: "w-full h-full rounded-xl",
   
@@ -1382,7 +1386,7 @@ export const movieDetailHStyles = {
   notFoundContainer: "min-h-screen flex items-center justify-center bg-black text-white",
   notFoundContent: "text-center",
   notFoundTitle: "text-2xl",
-  notFoundLink: "mt-4 inline-block text-red-400 underline",
+  notFoundLink: "mt-4 inline-block text-blue-400 underline",
   
   // Custom CSS
   customCSS: `

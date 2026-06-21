@@ -325,7 +325,7 @@ const MovieDetailPage = () => {
                         className={movieDetailStyles.movieTitle}
                         style={{
                             fontFamily: "'Cinzel', 'Times New Roman', serif",
-                            textShadow: "0 4px 20px rgba(220, 38, 38, 0.6)",
+                            textShadow: "0 4px 20px rgba(37, 99, 235, 0.6)",
                             letterSpacing: "0.08em",
                         }}
                     >

@@ -21,12 +21,15 @@ const MoviesPage = () => {
   const visibleMovies = showAll ? filteredMovies : filteredMovies.slice(0, COLLAPSE_COUNT);
 
   const categories = [
-    { id: 'all', name: 'All Movies' },
-    { id: 'action', name: 'Action' },
-    { id: 'horror', name: 'Horror' },
-    { id: 'comedy', name: 'Comedy' },
-    { id: 'adventure', name: 'Adventure' }
-  ];
+  { id: 'all', name: 'All Movies' },
+  { id: 'action', name: 'Action' },
+  { id: 'horror', name: 'Horror' },
+  { id: 'comedy', name: 'Comedy' },
+  { id: 'adventure', name: 'Adventure' },
+  { id: 'animation', name: 'Animation' },
+  { id: 'sci-fi', name: 'Sci-Fi' },
+  { id: 'drama', name: 'Drama' }
+];
 
   return (
     <div className={moviesPageStyles.container}>
