@@ -15,7 +15,7 @@ export const bannerStyles = {
   description: "text-sm sm:text-base md:text-lg text-gray-200 mb-6 max-w-lg",
   
   // Rating and genre styles
-  ratingGenreContainer: "flex flex-wrap items-center gap-4 font-[pacifico] mb-6",
+  ratingGenreContainer: "flex flex-wrap items-center gap-4 font-[Cinzel] mb-6",
   ratingContainer: "flex items-center mr-2",
   starsContainer: "flex",
   star: "h-4 w-4 sm:h-5 sm:w-5 text-yellow-400",
@@ -58,8 +58,8 @@ export const navbarStyles = {
   // Logo section
   logoContainer: "flex items-center gap-3 z-20 flex-shrink-0",
   logoIconContainer: "bg-black p-3 md:p-3 xl:p-3 lg:p-3 rounded-full border border-blue-600",
-  logoIcon: "h-4 w-4 md:h-2 md:w-2 lg:h-4 lg:w-4 xl:w-4 xl:h-4  text-blue-500",
-  logoText: "text-lg md:text-sm xl:text-lg lg:tex-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-200 font-[pacifico]",
+  logoIcon: "h-4 w-4 md:h-2 md:w-2 lg:h-4 lg:w-4 xl:w-4 xl:h-4  text-white",
+  logoText: "text-lg md:text-lg xl:text-lg lg:tex-lg font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-200 font-[Cinzel]",
 
   // Desktop navigation
   desktopNav: "hidden lg:flex absolute left-1/2 transform -translate-x-1/2 z-10 items-center bg-black/70 backdrop-blur-md rounded-full px-3 py-2 gap-2 shadow-inner",
@@ -921,7 +921,7 @@ export const trailersStyles = {
   
   // Left side - Trailers List
   leftSide: "w-full md:w-1/2 lg:w-2/5",
-  leftCard: "bg-white font-[pacifico] rounded-xl shadow-lg p-5 md:p-6",
+  leftCard: "bg-white font-['Bebas Neue'] rounded-xl shadow-lg p-5 md:p-6",
   leftTitle: "text-2xl font-semibold mb-4 flex items-center gap-2",
   titleIcon: "text-blue-600",
   
@@ -974,7 +974,7 @@ export const trailersStyles = {
   // Trailer Info
   trailerInfo: "p-5 md:p-6",
   infoHeader: "flex flex-col md:flex-row md:items-center justify-between gap-3",
-  trailerTitle: "text-2xl font-bold font-dancing",
+  trailerTitle: "text-2xl font-bold font-['Cinzel'] ",
   trailerMeta: "flex items-center space-x-4 text-sm text-gray-700",
   metaItem: "flex items-center",
   metaIcon: "mr-1 text-blue-600",
@@ -987,7 +987,7 @@ export const trailersStyles = {
   description: "mt-4 text-gray-700",
   
   // Credits
-  credits: "mt-6 font-[pacifico]",
+  credits: "mt-6 font-['Bebas Neue']",
   creditsTitle: "text-2xl font-bold mb-4",
   creditsGrid: "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 items-start",
   creditItem: "flex flex-col items-center text-center",

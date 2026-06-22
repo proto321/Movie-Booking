@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { navbarStyles, navbarCSS } from '../assets/dummyStyles'
-import {Calendar, Clapperboard, Home, Film, Mail, Ticket, Menu } from "lucide-react";
+import {Calendar, Clapperboard, Home, Film, Mail, Ticket, Menu, Popcorn } from "lucide-react";
   import { NavLink } from "react-router-dom";
 
   import { User, LogOut, X } from "lucide-react";
@@ -106,10 +106,10 @@ const Navbar = () => {
     }`}>
         <div className={navbarStyles.container}>
             <div className={navbarStyles.logoContainer}>
-                <div className={navbarStyles.logoIconContainer}>
-                    <Clapperboard className={navbarStyles.logoIcon}/>
-                </div>
-                <div className={navbarStyles.logoText}>MovieMania 🎬</div>
+                {/* <div className={navbarStyles.logoIconContainer}>
+                    <Popcorn className={navbarStyles.logoIcon}/>
+                </div> */}
+                <div className={navbarStyles.logoText}> 🎬 MovieMania</div>
             </div>
 
             <div className={navbarStyles.desktopNav}>
