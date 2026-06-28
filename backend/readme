@@ -1,0 +1,40 @@
+frontend>
+npm run dev
+
+backend>
+npm start
+
+---------------------------------------------------------
+
+If your package.json contains:
+
+        {
+        "scripts": {
+            "start": "nodemon server.js",
+            "server": "nodemon server.js"
+        }
+        }
+
+then you can run:
+        npm run server
+___________________________________________________________
+
+If your package.json only has:
+
+        {
+        "scripts": {
+            "start": "nodemon server.js"
+        }
+        }
+
+then:
+        npm start
+______________________________________________________
+
+To see all available scripts,
+ run:
+        npm run
+
+and npm will list them.
+
+Paste your package.json if you're unsure, and I'll tell you exactly which command to use.
