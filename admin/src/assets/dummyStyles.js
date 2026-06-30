@@ -644,15 +644,20 @@ export const customStyles = `
   }
   .card-hover:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.25);
+    // box-shadow: 0 25px 50px -12px rgba(220, 38, 38, 0.25);
+    border-color: rgba(59, 130, 246, 0.7);
+    box-shadow:
+    0 12px 30px rgba(59, 130, 246, 0.35),
+    0 0 20px rgba(59, 130, 246, 0.2);
   }
   .filter-btn {
     transition: all 0.18s ease-in-out;
   }
   .gradient-border {
-    background: linear-gradient(135deg, rgba(220, 38, 38, 0.06), rgba(185, 28, 28, 0.02));
-    border: 1px solid rgba(220, 38, 38, 0.08);
-  }
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  background: rgba(17, 24, 39, 0.4);
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+}
   .scrollbar-thin::-webkit-scrollbar {
     width: 6px;
   }
@@ -661,10 +666,10 @@ export const customStyles = `
     border-radius: 10px;
   }
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: rgba(220, 38, 38, 0.35);
+    background: rgba(59, 130, 246, 0.35);
     border-radius: 10px;
   }
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background: rgba(220, 38, 38, 0.5);
+    background: rgba(59, 130, 246, 0.5);
   }
 `;
