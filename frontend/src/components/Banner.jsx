@@ -29,7 +29,7 @@ const Banner = () => {
             <h1
               className={bannerStyles.title}
               style={{
-                // fontFamily: "'Dancing Script', cursive",
+                fontFamily: "'Dancing Script', cursive",
                 // fontFamily: "'Cinzel'",
                 // fontFamily: "'Bebas Neue', sans-serif"
               }}
